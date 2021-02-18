@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 func IsValidSubsequence(array []int, sequence []int) bool {
 	// Write your code here.
 	arrayIdx := 0
@@ -11,4 +13,13 @@ func IsValidSubsequence(array []int, sequence []int) bool {
 		arrayIdx += 1
 	}
 	return seqIdx == len(sequence)
+}
+
+func main() {
+	array := []int{5, 1, 22, 25, 6, -1, 8, 10}
+	sequence := []int{1, 6, -1, 10}
+	ok := IsValidSubsequence(array, sequence)
+	if ok {
+		fmt.Println("true")
+	}
 }
