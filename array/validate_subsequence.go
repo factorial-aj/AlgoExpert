@@ -21,5 +21,7 @@ func main() {
 	ok := IsValidSubsequence(array, sequence)
 	if ok {
 		fmt.Println("true")
+		return
 	}
+	fmt.Println("false")
 }
